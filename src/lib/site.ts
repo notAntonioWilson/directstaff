@@ -1,15 +1,17 @@
 // Single source of truth for Direct Staff Inc. site content.
 
+const CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_38rSmNL40WXgdieukkqKbzzBpaF";
+
 export const img = {
-  hero: "/images/hero.jpg",
-  cta: "/images/cta.jpg",
-  about: "/images/about.jpg",
-  contract: "/images/solution-contract.jpg",
-  direct: "/images/solution-direct.jpg",
-  automotive: "/images/industry-automotive.jpg",
-  defense: "/images/industry-defense.jpg",
-  engineering: "/images/industry-engineering.jpg",
-  industrial: "/images/industry-industrial.jpg",
+  hero: `${CDN}/hf_20260611_210913_a3b0541a-7632-4595-a7fc-4ceab29ca999.png`,
+  cta: `${CDN}/hf_20260611_210919_a0b744c8-d87e-411f-b4c3-59be22511d0a.png`,
+  about: `${CDN}/hf_20260611_210925_b972671e-1b97-4a40-8e46-91183b62b2db.png`,
+  contract: `${CDN}/hf_20260611_210929_7a9db4be-0361-4388-bd98-bed6a04fba2d.png`,
+  direct: `${CDN}/hf_20260611_210935_77150b86-84a2-4442-9969-36ad8a20e03a.png`,
+  automotive: `${CDN}/hf_20260611_210946_aaa3e7e7-2c37-4d67-915d-323ffde2523d.png`,
+  defense: `${CDN}/hf_20260611_210951_a587f9d6-5334-414e-8cf4-384a9d8e0c05.png`,
+  engineering: `${CDN}/hf_20260611_210956_5722f524-404c-4117-b67a-d9e70f2d8249.png`,
+  industrial: `${CDN}/hf_20260611_211001_7ae9173b-142a-43d2-b631-29c469538bae.png`,
 };
 
 export const company = {
