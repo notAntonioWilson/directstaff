@@ -43,28 +43,17 @@ export function Header() {
 
       {/* Main nav */}
       <div className="border-b border-line bg-white">
-        <div className="wrap flex h-20 items-center gap-4">
+        <div className="wrap flex h-20 items-center justify-between gap-6">
           <Logo />
 
-          <nav className="hidden flex-1 items-center justify-center gap-7 xl:flex" aria-label="Primary">
+          <nav className="hidden flex-1 items-center justify-center gap-10 xl:flex" aria-label="Primary">
             <DropNav label="Solutions" href="/solutions" items={solutions.map((s) => ({ label: s.title, href: `/solutions/${s.slug}`, note: s.short }))} />
             <DropNav label="Industries" href="/industries" items={industries.map((i) => ({ label: i.title, href: `/industries/${i.slug}`, note: i.blurb }))} />
-            <Link href="/about" className="text-[0.8rem] font-semibold uppercase tracking-wide text-ink hover:text-plum-700">About</Link>
+            <Link href="/about" className="text-sm font-semibold uppercase tracking-wide text-ink hover:text-plum-700">About</Link>
+            <a href={company.phoneHref} className="text-sm font-semibold uppercase tracking-wide text-ink hover:text-plum-700">Call</a>
           </nav>
 
-          <div className="ml-auto hidden items-center gap-3 lg:flex xl:ml-0">
-            {/* Phone button */}
-            <a
-              href={company.phoneHref}
-              className="flex items-center gap-2 border border-line px-4 py-2.5 text-sm font-bold text-plum-900 hover:border-plum-700 hover:bg-paper"
-              aria-label={`Call ${company.phone}`}
-            >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-              </svg>
-              {company.phone}
-            </a>
-
+          <div className="hidden shrink-0 items-center gap-3 xl:flex">
             {/* Two clear CTA buttons */}
             <Link
               href="/employers"
@@ -170,7 +159,7 @@ function DropNav({
 }) {
   return (
     <div className="group relative">
-      <Link href={href} className="flex items-center gap-1 text-[0.8rem] font-semibold uppercase tracking-wide text-ink hover:text-plum-700">
+      <Link href={href} className="flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-ink hover:text-plum-700">
         {label}
         <span className="text-[0.6rem] text-steel">▾</span>
       </Link>
