@@ -21,7 +21,7 @@ export function Footer() {
         </div>
 
         <FooterCol title="Solutions" links={solutions.map((s) => ({ label: s.title, href: `/solutions/${s.slug}` }))} />
-        <FooterCol title="Industries" links={industries.map((i) => ({ label: i.title, href: "/#industries" }))} />
+        <FooterCol title="Industries" links={industries.map((i) => ({ label: i.title, href: `/industries/${i.slug}` }))} />
         <FooterCol
           title="Company"
           links={[

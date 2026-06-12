@@ -139,7 +139,7 @@ export default function Home() {
                 program and your industry.
               </p>
             </div>
-            <Link href="/employers" className="shrink-0 border-b-2 border-gold pb-1 text-sm font-bold uppercase tracking-wide text-plum-900 hover:text-plum-700">
+            <Link href="/solutions" className="shrink-0 border-b-2 border-gold pb-1 text-sm font-bold uppercase tracking-wide text-plum-900 hover:text-plum-700">
               All solutions →
             </Link>
           </div>
@@ -194,20 +194,21 @@ export default function Home() {
                 Deep specialization where it counts.
               </h2>
             </div>
-            <Link href="/about" className="shrink-0 border-b-2 border-gold pb-1 text-sm font-bold uppercase tracking-wide text-gold-light hover:text-gold">
-              Our story →
+            <Link href="/industries" className="shrink-0 border-b-2 border-gold pb-1 text-sm font-bold uppercase tracking-wide text-gold-light hover:text-gold">
+              All industries →
             </Link>
           </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {industries.map((i) => (
-              <article key={i.slug} className="group relative aspect-[4/3] overflow-hidden sm:aspect-[3/4]">
+              <Link key={i.slug} href={`/industries/${i.slug}`} className="group relative block aspect-[4/3] overflow-hidden sm:aspect-[3/4]">
                 <Photo src={i.image} alt={i.title} className="absolute inset-0 h-full w-full" />
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
                   <h3 className="font-display text-2xl font-bold text-white">{i.title}</h3>
                   <p className="mt-1 text-sm text-white/75">{i.blurb}</p>
+                  <span className="mt-3 text-xs font-bold uppercase tracking-wide text-gold-light opacity-0 transition group-hover:opacity-100">Explore →</span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

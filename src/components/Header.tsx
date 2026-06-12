@@ -47,8 +47,8 @@ export function Header() {
           <Logo />
 
           <nav className="hidden flex-1 items-center justify-center gap-7 xl:flex" aria-label="Primary">
-            <DropNav label="Solutions" href="/#solutions" items={solutions.map((s) => ({ label: s.title, href: `/solutions/${s.slug}`, note: s.short }))} />
-            <DropNav label="Industries" href="/#industries" items={industries.map((i) => ({ label: i.title, href: `/#industries`, note: i.blurb }))} />
+            <DropNav label="Solutions" href="/solutions" items={solutions.map((s) => ({ label: s.title, href: `/solutions/${s.slug}`, note: s.short }))} />
+            <DropNav label="Industries" href="/industries" items={industries.map((i) => ({ label: i.title, href: `/industries/${i.slug}`, note: i.blurb }))} />
             <Link href="/about" className="text-[0.8rem] font-semibold uppercase tracking-wide text-ink hover:text-plum-700">About</Link>
           </nav>
 
