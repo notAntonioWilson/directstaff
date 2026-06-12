@@ -202,7 +202,8 @@ export default function Home() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {industries.map((i) => (
               <Link key={i.slug} href={`/industries/${i.slug}`} className="group relative block aspect-[4/3] overflow-hidden sm:aspect-[3/4]">
-                <Photo src={i.image} alt={i.title} className="absolute inset-0 h-full w-full" />
+                <Photo src={i.image} alt={i.title} grade="none" className="absolute inset-0 h-full w-full" />
+                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-plum-950 via-plum-950/70 to-transparent" aria-hidden />
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
                   <h3 className="font-display text-2xl font-bold text-white">{i.title}</h3>
                   <p className="mt-1 text-sm text-white/75">{i.blurb}</p>
