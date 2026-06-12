@@ -1,0 +1,11 @@
+{
+  "name": "Direct Staff Inc.",
+  "short_name": "Direct Staff",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#3D1230",
+  "background_color": "#2A0C21",
+  "display": "standalone"
+}

@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   description:
     "For over 30 years, Direct Staff has placed the engineers, designers, and technical experts that move the automotive, defense, and industrial sectors forward. Contract staffing and direct hire, nationwide.",
   metadataBase: new URL("https://www.dirstaff.com"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     title: "Direct Staff Inc. | Executive & Technical Search",
     description:
