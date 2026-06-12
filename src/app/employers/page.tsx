@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/ui";
 import { RequestTalentForm } from "@/components/RequestTalentForm";
+import { FAQ } from "@/components/FAQ";
 import { solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -60,6 +61,51 @@ export default function EmployersPage() {
           </div>
         </div>
       </section>
+
+      {/* Why employers choose us */}
+      <section className="bg-plum-950 py-20 text-white lg:py-24">
+        <div className="wrap">
+          <Eyebrow className="text-gold-light">Why employers partner with us</Eyebrow>
+          <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight sm:text-5xl">
+            A staffing partner that understands the work.
+          </h2>
+          <div className="mt-12 grid gap-10 md:grid-cols-3">
+            <div className="border-t-2 border-gold pt-6">
+              <h3 className="font-display text-xl font-bold">Speed without compromise</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">
+                A vetted shortlist typically within 48 hours. We move quickly because three decades of
+                relationships mean we usually know where the right person is before you finish describing
+                the role.
+              </p>
+            </div>
+            <div className="border-t-2 border-gold pt-6">
+              <h3 className="font-display text-xl font-bold">Pre-screened candidates only</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">
+                Every candidate is technically evaluated before they reach you. You spend your time
+                interviewing qualified people, not filtering a pile of resumes.
+              </p>
+            </div>
+            <div className="border-t-2 border-gold pt-6">
+              <h3 className="font-display text-xl font-bold">One accountable team</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">
+                Contract or direct, you work with one team that learns your program, your standards, and
+                your culture, and stays engaged through onboarding and beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FAQ
+        eyebrow="For employers"
+        items={[
+          { q: "How quickly can you deliver candidates?", a: "For most technical roles we return a vetted shortlist within 48 hours. Timelines can vary with the seniority and specialization of the role, but speed is a core part of how we operate." },
+          { q: "What is the difference between contract and direct hire?", a: "With contract staffing, the professional is a Direct Staff employee placed on-site at your facility, fully benefited, with payroll and insurance handled by us. With direct hire, we run the search and the candidate is hired directly as your employee. Many clients use both depending on the need." },
+          { q: "Which industries do you specialize in?", a: "Automotive, defense, engineering and design, and industrial and manufacturing. Our recruiters understand these disciplines, which is what allows us to screen candidates on real capability rather than keywords." },
+          { q: "Do you place nationwide?", a: "Yes. While Direct Staff is based in Sterling Heights, Michigan, we place technical talent nationwide for our clients." },
+          { q: "Is there any obligation to request talent?", a: "None. Requesting a shortlist costs nothing and carries no commitment. You only engage if the candidates are right for your program." },
+        ]}
+      />
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/ui";
 import { ResumeForm } from "@/components/ResumeForm";
+import { FAQ } from "@/components/FAQ";
 import { industries } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -65,6 +66,17 @@ export default function JobSeekersPage() {
           </div>
         </div>
       </section>
+
+      <FAQ
+        eyebrow="For job seekers"
+        items={[
+          { q: "Does it cost anything to submit my resume?", a: "No. Submitting your resume to Direct Staff is always free. We are paid by the companies that hire, never by candidates." },
+          { q: "What happens after I submit?", a: "Your information goes directly to our recruiters. If your background matches an open or upcoming search, a recruiter reaches out to discuss the opportunity and represent you through the process." },
+          { q: "What kinds of roles do you place?", a: "We place engineers, designers, and technical professionals across automotive, defense, engineering and design, and industrial and manufacturing, in both contract and direct positions." },
+          { q: "Will my information be kept confidential?", a: "Yes. We treat your information with discretion and only share it with prospective employers in connection with opportunities relevant to you." },
+          { q: "I don't see a role posted that fits me. Should I still submit?", a: "Absolutely. Many of our searches are filled before they are ever posted. Having your resume on file means we can reach out the moment a fitting role opens." },
+        ]}
+      />
     </>
   );
 }

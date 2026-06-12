@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/ui";
-import { RequestTalentForm } from "@/components/RequestTalentForm";
+import { DualForm } from "@/components/DualForm";
 import { company } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -52,10 +52,14 @@ export default function ContactPage() {
 
           <div className="lg:col-span-7">
             <div className="border border-line bg-paper p-8">
-              <Eyebrow>Request talent</Eyebrow>
-              <h2 className="mt-3 font-display text-3xl font-bold text-ink">Tell us what you&apos;re hiring for.</h2>
+              <Eyebrow>Get in touch</Eyebrow>
+              <h2 className="mt-3 font-display text-3xl font-bold text-ink">How can we help?</h2>
+              <p className="mt-2 text-sm text-steel">
+                Hiring technical talent, or looking for your next role? Choose below and we&apos;ll route
+                you to the right team.
+              </p>
               <div className="mt-6 max-w-xl">
-                <RequestTalentForm variant="light" />
+                <DualForm variant="light" defaultMode="hire" />
               </div>
             </div>
           </div>
