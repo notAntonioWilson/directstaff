@@ -43,17 +43,16 @@ export function Header() {
 
       {/* Main nav */}
       <div className="border-b border-line bg-white">
-        <div className="wrap flex h-20 items-center justify-between gap-4">
+        <div className="wrap flex h-20 items-center gap-4">
           <Logo />
 
-          <nav className="hidden items-center gap-6 xl:flex" aria-label="Primary">
+          <nav className="hidden flex-1 items-center justify-center gap-7 xl:flex" aria-label="Primary">
             <DropNav label="Solutions" href="/#solutions" items={solutions.map((s) => ({ label: s.title, href: `/solutions/${s.slug}`, note: s.short }))} />
             <DropNav label="Industries" href="/#industries" items={industries.map((i) => ({ label: i.title, href: `/#industries`, note: i.blurb }))} />
-            <Link href="/about" className="text-sm font-semibold text-ink hover:text-plum-700">About</Link>
-            <Link href="/contact" className="text-sm font-semibold text-ink hover:text-plum-700">Contact</Link>
+            <Link href="/about" className="text-[0.8rem] font-semibold uppercase tracking-wide text-ink hover:text-plum-700">About</Link>
           </nav>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="ml-auto hidden items-center gap-3 lg:flex xl:ml-0">
             {/* Phone button */}
             <a
               href={company.phoneHref}
@@ -171,7 +170,7 @@ function DropNav({
 }) {
   return (
     <div className="group relative">
-      <Link href={href} className="flex items-center gap-1 text-sm font-semibold text-ink hover:text-plum-700">
+      <Link href={href} className="flex items-center gap-1 text-[0.8rem] font-semibold uppercase tracking-wide text-ink hover:text-plum-700">
         {label}
         <span className="text-[0.6rem] text-steel">▾</span>
       </Link>
