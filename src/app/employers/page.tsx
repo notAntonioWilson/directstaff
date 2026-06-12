@@ -20,7 +20,7 @@ export default function EmployersPage() {
         intro="Tell us the role. We return a vetted shortlist, typically within 48 hours, drawn from three decades of relationships across the engineering and design community."
       />
 
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-14 lg:py-16">
         <div className="wrap grid gap-14 lg:grid-cols-12">
           {/* Solutions detail */}
           <div className="lg:col-span-7">
@@ -63,13 +63,13 @@ export default function EmployersPage() {
       </section>
 
       {/* Why employers choose us */}
-      <section className="bg-plum-950 py-20 text-white lg:py-24">
+      <section className="bg-plum-950 py-14 text-white lg:py-16">
         <div className="wrap">
           <Eyebrow className="text-gold-light">Why employers partner with us</Eyebrow>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight sm:text-5xl">
             A staffing partner that understands the work.
           </h2>
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
+          <div className="mt-8 grid gap-10 md:grid-cols-3">
             <div className="border-t-2 border-gold pt-6">
               <h3 className="font-display text-xl font-bold">Speed without compromise</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/70">

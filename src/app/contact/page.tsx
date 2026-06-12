@@ -18,7 +18,7 @@ export default function ContactPage() {
         intro="Reach us directly, or send the details below and a Direct Staff recruiter will follow up, typically within one business day."
       />
 
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-14 lg:py-16">
         <div className="wrap grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Eyebrow>Reach us</Eyebrow>

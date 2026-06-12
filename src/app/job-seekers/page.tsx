@@ -26,7 +26,7 @@ export default function JobSeekersPage() {
         intro="Direct Staff places engineers, designers, and technical professionals into the programs that build the modern world. Submit your resume and we'll match you when the right search opens."
       />
 
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-14 lg:py-16">
         <div className="wrap grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Eyebrow>How it works</Eyebrow>
@@ -42,7 +42,7 @@ export default function JobSeekersPage() {
               ))}
             </div>
 
-            <div className="mt-12">
+            <div className="mt-8">
               <Eyebrow>Disciplines we place</Eyebrow>
               <div className="mt-5 flex flex-wrap gap-3">
                 {industries.map((i) => (

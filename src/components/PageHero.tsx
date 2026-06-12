@@ -12,7 +12,7 @@ export function PageHero({
   return (
     <section className="relative overflow-hidden bg-plum-950 text-white">
       <div className="absolute inset-0 blueprint opacity-30" aria-hidden />
-      <div className="relative wrap py-20 lg:py-24">
+      <div className="relative wrap py-14 lg:py-16">
         <Eyebrow className="text-gold-light">{eyebrow}</Eyebrow>
         <h1 className="mt-6 max-w-4xl font-display text-5xl font-bold leading-[1.04] tracking-tight sm:text-6xl">
           {title}

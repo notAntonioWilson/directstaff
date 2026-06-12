@@ -26,7 +26,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <Photo src={img.hero} alt="Engineers on a technical program floor" priority grade="hero" className="h-full w-full" />
         </div>
-        <div className="relative wrap grid gap-12 py-20 lg:grid-cols-12 lg:py-28">
+        <div className="relative wrap grid gap-12 py-14 lg:grid-cols-12 lg:items-center lg:py-16">
           <div className="lg:col-span-7">
             <Eyebrow className="text-gold-light">
               North American engineering &amp; technical staffing
@@ -42,13 +42,10 @@ export default function Home() {
               technical staffing partner built on tenure, relationships, and a standard of work that has
               made us a leader in the field.
             </p>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Link href="/employers" className="bg-white px-8 py-4 text-sm font-bold uppercase tracking-wide text-plum-950 hover:bg-paper">
-                For Employers
-              </Link>
-              <Link href="/job-seekers" className="border border-white/40 px-8 py-4 text-sm font-bold uppercase tracking-wide text-white hover:bg-white/10">
-                For Job Seekers
-              </Link>
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/70">
+              <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 bg-gold" />Contract staffing</span>
+              <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 bg-gold" />Direct hire</span>
+              <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 bg-gold" />Nationwide placement</span>
             </div>
           </div>
 
@@ -70,7 +67,7 @@ export default function Home() {
         <div className="relative border-t border-white/10">
           <div className="wrap grid grid-cols-2 gap-px md:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.label} className="py-8">
+              <div key={s.label} className="py-6">
                 <div className="font-display text-4xl font-bold text-gold">{s.value}</div>
                 <div className="mt-1 text-sm text-white/60">{s.label}</div>
               </div>
@@ -80,8 +77,8 @@ export default function Home() {
       </section>
 
       {/* HERITAGE / 30+ YEARS */}
-      <section className="bg-white py-20 lg:py-24">
-        <div className="wrap grid gap-14 lg:grid-cols-12 lg:items-center">
+      <section className="bg-white py-14 lg:py-16">
+        <div className="wrap grid gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6">
             <Eyebrow>Three decades in the field</Eyebrow>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
@@ -103,18 +100,29 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-6">
-            <div className="grid grid-cols-2 gap-6">
-              <HeritageStat value="30+" label="Years in technical staffing" />
-              <HeritageStat value="4" label="Core industries served" />
-              <HeritageStat value="National" label="Placement reach" />
-              <HeritageStat value="48h" label="Typical shortlist turnaround" />
+            <div className="border-l-2 border-gold pl-8">
+              <h3 className="font-display text-2xl font-bold text-plum-900">What three decades buys you</h3>
+              <ul className="mt-6 space-y-5">
+                <li>
+                  <span className="block font-semibold text-ink">An established network</span>
+                  <span className="mt-1 block text-sm leading-relaxed text-steel">Relationships with candidates and clients built across generations of programs, so the right person is often already known to us.</span>
+                </li>
+                <li>
+                  <span className="block font-semibold text-ink">Proven processes</span>
+                  <span className="mt-1 block text-sm leading-relaxed text-steel">A sourcing and screening method refined over thirty years, not improvised for each search.</span>
+                </li>
+                <li>
+                  <span className="block font-semibold text-ink">Industry fluency</span>
+                  <span className="mt-1 block text-sm leading-relaxed text-steel">Recruiters who understand automotive, defense, engineering, and industrial work well enough to screen on real capability.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* SOLUTIONS */}
-      <section id="solutions" className="scroll-mt-28 blueprint bg-paper py-20 lg:py-24">
+      <section id="solutions" className="scroll-mt-28 blueprint bg-paper py-14 lg:py-16">
         <div className="wrap">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
@@ -132,7 +140,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:gap-10">
+          <div className="mt-10 grid gap-8 md:grid-cols-2 lg:gap-10">
             {solutions.map((s) => (
               <article key={s.slug} className="group border border-line bg-white">
                 <Photo src={s.image} alt={s.title} className="aspect-[16/9]" />
@@ -150,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* PROCESS */}
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-14 lg:py-16">
         <div className="wrap">
           <Eyebrow>How we work</Eyebrow>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
@@ -160,7 +168,7 @@ export default function Home() {
             A disciplined process refined over three decades. Every engagement runs through the same four
             stages, so you always know what to expect.
           </p>
-          <div className="mt-14 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-4">
             {process.map((p) => (
               <div key={p.n} className="bg-white p-8">
                 <div className="font-mono text-sm text-gold-dark">{p.n}</div>
@@ -173,7 +181,7 @@ export default function Home() {
       </section>
 
       {/* INDUSTRIES */}
-      <section id="industries" className="scroll-mt-28 bg-plum-950 py-20 text-white lg:py-24">
+      <section id="industries" className="scroll-mt-28 bg-plum-950 py-14 text-white lg:py-16">
         <div className="wrap">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
@@ -187,7 +195,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {industries.map((i) => (
               <article key={i.slug} className="group relative aspect-[3/4] overflow-hidden">
                 <Photo src={i.image} alt={i.title} className="absolute inset-0 h-full w-full" />
@@ -202,13 +210,13 @@ export default function Home() {
       </section>
 
       {/* WHY DIRECT STAFF */}
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-14 lg:py-16">
         <div className="wrap">
           <Eyebrow>Why Direct Staff</Eyebrow>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
             What sets a thirty-year staffing partner apart.
           </h2>
-          <div className="mt-14 grid gap-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-10 md:grid-cols-2">
             {differentiators.map((d) => (
               <div key={d.t} className="border-l-2 border-gold pl-6">
                 <h3 className="font-display text-2xl font-bold text-plum-900">{d.t}</h3>
@@ -224,7 +232,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <Photo src={img.cta} alt="" grade="cta" className="h-full w-full" />
         </div>
-        <div className="relative wrap py-24 text-center">
+        <div className="relative wrap py-16 text-center">
           <Eyebrow className="justify-center text-gold-light">Get started</Eyebrow>
           <h2 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl">
             Your next hire, or your next role, starts here.
@@ -247,11 +255,3 @@ export default function Home() {
   );
 }
 
-function HeritageStat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="border border-line bg-paper p-6">
-      <div className="font-display text-4xl font-bold text-plum-900">{value}</div>
-      <div className="mt-2 text-sm text-steel">{label}</div>
-    </div>
-  );
-}

@@ -28,7 +28,7 @@ export default function AboutPage() {
       />
 
       {/* Philosophy */}
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-14 lg:py-16">
         <div className="wrap grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Eyebrow>Our philosophy</Eyebrow>
@@ -64,13 +64,13 @@ export default function AboutPage() {
       </section>
 
       {/* Heritage timeline-style band */}
-      <section className="blueprint bg-paper py-20 lg:py-24">
+      <section className="blueprint bg-paper py-14 lg:py-16">
         <div className="wrap">
           <Eyebrow>Three decades of staffing</Eyebrow>
           <h2 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight text-ink">
             Built on tenure, relationships, and a standard of work.
           </h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-8 grid gap-8 md:grid-cols-3">
             <div className="border-t-2 border-gold pt-6">
               <h3 className="font-display text-xl font-bold text-plum-900">A foundation in technical work</h3>
               <p className="mt-3 text-sm leading-relaxed text-steel">
@@ -110,13 +110,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-14 lg:py-16">
         <div className="wrap">
           <Eyebrow>What we stand for</Eyebrow>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight text-ink">
             The principles behind every placement.
           </h2>
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
+          <div className="mt-8 grid gap-10 md:grid-cols-2">
             {values.map((v) => (
               <div key={v.t} className="border-l-2 border-gold pl-6">
                 <h3 className="font-display text-2xl font-bold text-plum-900">{v.t}</h3>
@@ -128,13 +128,13 @@ export default function AboutPage() {
       </section>
 
       {/* Industries recap */}
-      <section className="blueprint bg-paper py-20 lg:py-24">
+      <section className="blueprint bg-paper py-14 lg:py-16">
         <div className="wrap">
           <Eyebrow>Where we work</Eyebrow>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight text-ink">
             Matching unique challenges with unique minds.
           </h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
             {industries.map((i) => (
               <div key={i.slug} className="flex gap-6 border-l-2 border-gold pl-6">
                 <div>
@@ -144,7 +144,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12">
+          <div className="mt-8">
             <Link href="/contact" className="bg-plum-900 px-8 py-4 text-sm font-bold uppercase tracking-wide text-white hover:bg-plum-700">
               Work with us
             </Link>

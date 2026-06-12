@@ -32,7 +32,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
         <div className="absolute inset-0">
           <Photo src={s.image} alt={s.title} grade="hero" priority className="h-full w-full" />
         </div>
-        <div className="relative wrap py-20 lg:py-28">
+        <div className="relative wrap py-14 lg:py-20">
           <nav className="mb-8 flex items-center gap-2 text-xs text-white/60" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-gold-light">Home</Link>
             <span>/</span>
@@ -49,13 +49,13 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* Body + form */}
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-14 lg:py-16">
         <div className="wrap grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Eyebrow>How it works</Eyebrow>
             <p className="mt-6 text-lg leading-relaxed text-ink">{s.body}</p>
 
-            <h2 className="mt-12 font-display text-2xl font-bold text-plum-900">What you get</h2>
+            <h2 className="mt-8 font-display text-2xl font-bold text-plum-900">What you get</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {s.points.map((p) => (
                 <li key={p} className="flex gap-3 border-l-2 border-gold pl-4 text-sm text-ink">
@@ -66,7 +66,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
 
             {"areas" in s && Array.isArray((s as { areas?: string[] }).areas) && (
               <>
-                <h2 className="mt-12 font-display text-2xl font-bold text-plum-900">Opportunity areas</h2>
+                <h2 className="mt-8 font-display text-2xl font-bold text-plum-900">Opportunity areas</h2>
                 <p className="mt-3 text-sm text-steel">Direct opportunities span a broad range of technical and professional disciplines:</p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   {(s as { areas: string[] }).areas.map((a) => (
