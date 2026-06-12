@@ -49,7 +49,11 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="wrap flex flex-col items-center justify-between gap-3 py-5 text-xs text-white/50 md:flex-row">
           <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
-          <p>Executive &amp; Technical Search · Sterling Heights, MI</p>
+          <nav className="flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Legal">
+            <Link href="/privacy-policy" className="hover:text-gold-light">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-gold-light">Terms of Service</Link>
+            <Link href="/disclaimer" className="hover:text-gold-light">Disclaimer</Link>
+          </nav>
         </div>
       </div>
     </footer>

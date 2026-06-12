@@ -72,3 +72,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     linear-gradient(90deg, rgba(201,162,75,0.06) 1px, transparent 1px);
   background-size: 48px 48px;
 }
+
+/* legal page list styling */
+.legal-body ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.legal-body li { padding-left: 0.25rem; }
+.legal-body a { color: #5C1A4B; text-decoration: underline; }
+.legal-body a:hover { color: #3D1230; }
