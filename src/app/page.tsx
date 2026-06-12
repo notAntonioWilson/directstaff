@@ -31,12 +31,12 @@ export default function Home() {
             <Eyebrow className="text-gold-light">
               North American engineering &amp; technical staffing
             </Eyebrow>
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
               The talent that
               <br />
               <span className="text-gold">engineers</span> what&apos;s next.
             </h1>
-            <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/80">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
               For more than 30 years, Direct Staff has placed the engineers, designers, and technical
               experts that move the automotive, defense, and industrial sectors forward. We are a
               technical staffing partner built on tenure, relationships, and a standard of work that has
@@ -65,10 +65,13 @@ export default function Home() {
 
         {/* Stat bar */}
         <div className="relative border-t border-white/10">
-          <div className="wrap grid grid-cols-2 gap-px md:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label} className="py-6">
-                <div className="font-display text-4xl font-bold text-gold">{s.value}</div>
+          <div className="wrap grid grid-cols-2 md:grid-cols-4">
+            {stats.map((s, idx) => (
+              <div
+                key={s.label}
+                className={`py-5 sm:py-6 ${idx % 2 === 0 ? "border-r border-white/10" : ""} md:border-r md:last:border-r-0 ${idx < 2 ? "border-b border-white/10 md:border-b-0" : ""} pl-0 md:pl-0`}
+              >
+                <div className="font-display text-3xl font-bold text-gold sm:text-4xl">{s.value}</div>
                 <div className="mt-1 text-sm text-white/60">{s.label}</div>
               </div>
             ))}
@@ -81,7 +84,7 @@ export default function Home() {
         <div className="wrap grid gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6">
             <Eyebrow>Three decades in the field</Eyebrow>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-ink sm:text-5xl">
               Over 30 years staffing the work that builds the modern world.
             </h2>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-steel">
@@ -127,7 +130,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <Eyebrow>Solutions</Eyebrow>
-              <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
+              <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight text-ink sm:text-5xl">
                 Two ways we put the right people to work.
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-steel">
@@ -143,7 +146,7 @@ export default function Home() {
           <div className="mt-10 grid gap-8 md:grid-cols-2 lg:gap-10">
             {solutions.map((s) => (
               <article key={s.slug} className="group border border-line bg-white">
-                <Photo src={s.image} alt={s.title} className="aspect-[16/9]" />
+                <Photo src={s.image} alt={s.title} className="aspect-[16/10]" />
                 <div className="p-8">
                   <h3 className="font-display text-2xl font-bold text-plum-900">{s.title}</h3>
                   <p className="mt-3 text-base leading-relaxed text-steel">{s.short}</p>
@@ -161,7 +164,7 @@ export default function Home() {
       <section className="bg-white py-14 lg:py-16">
         <div className="wrap">
           <Eyebrow>How we work</Eyebrow>
-          <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight text-ink sm:text-5xl">
             Source, screen, select, service.
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-steel">
@@ -186,7 +189,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <Eyebrow className="text-gold-light">Industries</Eyebrow>
-              <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight sm:text-5xl">
+              <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight sm:text-5xl">
                 Deep specialization where it counts.
               </h2>
             </div>
@@ -197,7 +200,7 @@ export default function Home() {
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {industries.map((i) => (
-              <article key={i.slug} className="group relative aspect-[3/4] overflow-hidden">
+              <article key={i.slug} className="group relative aspect-[4/3] overflow-hidden sm:aspect-[3/4]">
                 <Photo src={i.image} alt={i.title} className="absolute inset-0 h-full w-full" />
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
                   <h3 className="font-display text-2xl font-bold text-white">{i.title}</h3>
@@ -213,7 +216,7 @@ export default function Home() {
       <section className="bg-white py-14 lg:py-16">
         <div className="wrap">
           <Eyebrow>Why Direct Staff</Eyebrow>
-          <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
+          <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight text-ink sm:text-5xl">
             What sets a thirty-year staffing partner apart.
           </h2>
           <div className="mt-10 grid gap-10 md:grid-cols-2">
@@ -234,7 +237,7 @@ export default function Home() {
         </div>
         <div className="relative wrap py-16 text-center">
           <Eyebrow className="justify-center text-gold-light">Get started</Eyebrow>
-          <h2 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl">
+          <h2 className="mx-auto mt-5 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-5xl">
             Your next hire, or your next role, starts here.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-white/80">
