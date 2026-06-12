@@ -1,5 +1,5 @@
 /* Template privacy policy reflecting the site's actual data collection.
-   Not legal advice — client should have counsel review before relying on it. */
+   Not legal advice. Client should have counsel review before relying on it. */
 import type { Metadata } from "next";
 import { LegalLayout, LegalSection } from "@/components/LegalLayout";
 import { company } from "@/lib/site";
@@ -24,9 +24,9 @@ export default function PrivacyPolicyPage() {
       <LegalSection heading="Information we collect">
         <p>We collect information you provide directly through the forms on this site, including:</p>
         <ul>
-          <li><strong>Contact details</strong> — name, email address, phone number, and company name.</li>
-          <li><strong>Hiring requests</strong> — the role, skill set, or staffing need you describe when requesting talent.</li>
-          <li><strong>Job seeker information</strong> — your name, contact details, discipline or area of expertise, and any resume or document you upload.</li>
+          <li><strong>Contact details</strong>: name, email address, phone number, and company name.</li>
+          <li><strong>Hiring requests</strong>: the role, skill set, or staffing need you describe when requesting talent.</li>
+          <li><strong>Job seeker information</strong>: your name, contact details, discipline or area of expertise, and any resume or document you upload.</li>
         </ul>
         <p>
           We may also automatically collect limited technical information, such as your browser type, device

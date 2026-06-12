@@ -1,4 +1,4 @@
-/* Template disclaimer. Not legal advice — client should have counsel review. */
+/* Template disclaimer. Not legal advice. Client should have counsel review. */
 import type { Metadata } from "next";
 import { LegalLayout, LegalSection } from "@/components/LegalLayout";
 import { company } from "@/lib/site";

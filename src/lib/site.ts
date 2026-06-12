@@ -19,12 +19,12 @@ export const company = {
   tagline: "Executive & Technical Search",
   phone: "(586) 228-7100",
   phoneHref: "tel:+15862287100",
-  email: "info@dirstaff.com", // placeholder ghost email — swap when client provides
+  email: "info@dirstaff.com", // placeholder ghost email, swap when client provides
   emailHref: "mailto:info@dirstaff.com",
   location: "Sterling Heights, Michigan",
   serves: "Nationwide",
   yearsLabel: "30+ years",
-  linkedin: "https://www.linkedin.com/company/direct-staff",
+  linkedin: "https://www.linkedin.com/company/direct-staff/",
 };
 
 export const nav = [

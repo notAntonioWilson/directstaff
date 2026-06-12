@@ -5,6 +5,14 @@ import { useState } from "react";
 import { Logo } from "./Logo";
 import { company, nav, solutions, industries } from "@/lib/site";
 
+function LinkedInIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
+      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+    </svg>
+  );
+}
+
 export function Header() {
   const [open, setOpen] = useState(false);
 
@@ -14,22 +22,20 @@ export function Header() {
       <div className="hidden bg-plum-950 text-white md:block">
         <div className="wrap flex h-10 items-center justify-between text-xs">
           <div className="flex items-center gap-4">
-            <a href={company.phoneHref} className="font-medium hover:text-gold-light">
-              P: {company.phone}
-            </a>
-            <span className="text-white/30">|</span>
             <span className="text-white/70">{company.location}</span>
+            <span className="text-white/30">|</span>
+            <span className="text-white/70">Serving clients nationwide</span>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-white/60">Connect:</span>
+          <div className="flex items-center gap-4">
             <a
               href={company.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="grid h-6 w-6 place-items-center border border-white/25 text-[0.65rem] font-bold hover:border-gold hover:text-gold"
+              aria-label="Direct Staff on LinkedIn"
+              className="flex items-center gap-2 text-white/70 hover:text-gold-light"
             >
-              in
+              <LinkedInIcon className="h-4 w-4" />
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>
@@ -37,26 +43,47 @@ export function Header() {
 
       {/* Main nav */}
       <div className="border-b border-line bg-white">
-        <div className="wrap flex h-20 items-center justify-between">
+        <div className="wrap flex h-20 items-center justify-between gap-4">
           <Logo />
 
-          <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-6 xl:flex" aria-label="Primary">
             <DropNav label="Solutions" href="/#solutions" items={solutions.map((s) => ({ label: s.title, href: `/solutions/${s.slug}`, note: s.short }))} />
             <DropNav label="Industries" href="/#industries" items={industries.map((i) => ({ label: i.title, href: `/#industries`, note: i.blurb }))} />
-            <Link href="/employers" className="text-sm font-semibold text-ink hover:text-plum-700">For Employers</Link>
-            <Link href="/job-seekers" className="text-sm font-semibold text-ink hover:text-plum-700">For Job Seekers</Link>
             <Link href="/about" className="text-sm font-semibold text-ink hover:text-plum-700">About</Link>
-            <Link
-              href="/contact"
-              className="bg-plum-900 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white hover:bg-plum-700"
-            >
-              Contact
-            </Link>
+            <Link href="/contact" className="text-sm font-semibold text-ink hover:text-plum-700">Contact</Link>
           </nav>
+
+          <div className="hidden items-center gap-3 lg:flex">
+            {/* Phone button */}
+            <a
+              href={company.phoneHref}
+              className="flex items-center gap-2 border border-line px-4 py-2.5 text-sm font-bold text-plum-900 hover:border-plum-700 hover:bg-paper"
+              aria-label={`Call ${company.phone}`}
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
+              {company.phone}
+            </a>
+
+            {/* Two clear CTA buttons */}
+            <Link
+              href="/employers"
+              className="bg-plum-900 px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white hover:bg-plum-700"
+            >
+              Hire Talent
+            </Link>
+            <Link
+              href="/job-seekers"
+              className="border-2 border-plum-900 bg-white px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-plum-900 hover:bg-plum-900 hover:text-white"
+            >
+              Find a Job
+            </Link>
+          </div>
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden"
+            className="xl:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label="Toggle menu"
@@ -71,7 +98,7 @@ export function Header() {
 
         {/* Mobile menu */}
         {open && (
-          <div className="border-t border-line lg:hidden">
+          <div className="border-t border-line xl:hidden">
             <nav className="wrap flex flex-col py-4" aria-label="Mobile">
               {nav.map((item) => (
                 <Link
@@ -86,10 +113,45 @@ export function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-4 bg-plum-900 px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-white"
+                className="border-b border-line py-3 text-sm font-semibold text-ink"
               >
                 Contact
               </Link>
+
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                <Link
+                  href="/employers"
+                  onClick={() => setOpen(false)}
+                  className="bg-plum-900 px-4 py-3 text-center text-sm font-bold uppercase tracking-wide text-white"
+                >
+                  Hire Talent
+                </Link>
+                <Link
+                  href="/job-seekers"
+                  onClick={() => setOpen(false)}
+                  className="border-2 border-plum-900 px-4 py-3 text-center text-sm font-bold uppercase tracking-wide text-plum-900"
+                >
+                  Find a Job
+                </Link>
+              </div>
+
+              <div className="mt-4 flex items-center justify-between border-t border-line pt-4">
+                <a href={company.phoneHref} className="flex items-center gap-2 text-sm font-bold text-plum-900">
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                  </svg>
+                  {company.phone}
+                </a>
+                <a
+                  href={company.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Direct Staff on LinkedIn"
+                  className="text-plum-900 hover:text-plum-700"
+                >
+                  <LinkedInIcon className="h-5 w-5" />
+                </a>
+              </div>
             </nav>
           </div>
         )}

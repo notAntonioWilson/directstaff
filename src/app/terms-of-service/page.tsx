@@ -1,4 +1,4 @@
-/* Template terms of service. Not legal advice — client should have counsel review. */
+/* Template terms of service. Not legal advice. Client should have counsel review. */
 import type { Metadata } from "next";
 import { LegalLayout, LegalSection } from "@/components/LegalLayout";
 import { company } from "@/lib/site";
