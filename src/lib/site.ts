@@ -4,14 +4,14 @@ const CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_38rSmNL40WXgdieukkqKbzzBp
 
 export const img = {
   hero: `${CDN}/hf_20260614_155707_f347a191-a45e-4d96-80fb-a5e4b66afaac.png`,
-  cta: `${CDN}/hf_20260612_121554_705c3242-9feb-4117-bf8d-ab23673616ae.jpeg`,
-  about: `${CDN}/hf_20260612_121626_19c2f788-1d4a-46d1-98e4-49ceb12d1052.png`,
-  contract: `${CDN}/hf_20260612_121632_2866e177-df17-424c-be93-5cd079396d48.png`,
-  direct: `${CDN}/hf_20260612_121637_2097fc62-ab4b-4bc3-988c-71b9c796b5e9.png`,
+  cta: `${CDN}/hf_20260614_155712_a4bea2ac-45e0-45bf-85c2-47333059761d.png`,
+  about: `${CDN}/hf_20260614_155717_103de334-a38b-42df-bdbd-213201137563.png`,
+  contract: `${CDN}/hf_20260614_155725_479e0a86-e87a-44dd-b744-587e4f4bf916.png`,
+  direct: `${CDN}/hf_20260614_155729_b59520e0-7a44-4b18-9bbc-ac9449153e0b.png`,
   automotive: `${CDN}/hf_20260612_121646_728f3ba8-bcec-4be0-b92c-429dd3766b19.png`,
-  defense: `${CDN}/hf_20260612_121651_bdc04510-3cce-46dd-a30a-15c778ad365f.png`,
+  defense: `${CDN}/hf_20260614_155735_cee1158a-eba7-4eac-bee2-7336b50a3072.png`,
   engineering: `${CDN}/hf_20260612_121658_74c545de-9d2f-4f3d-9a96-25dc890ea3cc.png`,
-  industrial: `${CDN}/hf_20260612_121703_efa6f0e0-cb95-4117-9b18-3826505e7bfa.png`,
+  industrial: `${CDN}/hf_20260614_155741_15d81163-be82-4f6d-97b5-61e414ec43cf.png`,
 };
 
 export const company = {
