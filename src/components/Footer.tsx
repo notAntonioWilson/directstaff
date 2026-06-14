@@ -5,28 +5,32 @@ import { company, solutions, industries } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="bg-plum-950 text-white">
-      <div className="wrap grid gap-10 py-16 md:grid-cols-12">
+      <div className="wrap grid gap-10 py-12 md:grid-cols-12">
         <div className="md:col-span-4">
           <Logo light />
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
             North American engineering and design staffing. For over 30 years, Direct Staff has
             connected technical talent with the programs that depend on it.
           </p>
-          <a
-            href={company.phoneHref}
-            className="mt-5 inline-block font-display text-2xl font-bold text-gold-light hover:text-gold"
-          >
-            {company.phone}
-          </a>
-          <div className="mt-5">
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href={company.phoneHref}
+              className="inline-flex items-center gap-2 border border-white/20 px-4 py-2 text-sm font-bold text-gold-light transition hover:border-gold hover:text-gold"
+              aria-label={`Call ${company.phone}`}
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
+              {company.phone}
+            </a>
             <a
               href={company.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Direct Staff on LinkedIn"
-              className="inline-flex h-10 w-10 items-center justify-center border border-white/20 text-white/80 transition hover:border-gold hover:text-gold-light"
+              className="inline-flex h-9 w-9 items-center justify-center border border-white/20 text-white/80 transition hover:border-gold hover:text-gold-light"
             >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden>
                 <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
               </svg>
             </a>

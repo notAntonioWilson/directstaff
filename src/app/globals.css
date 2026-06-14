@@ -41,31 +41,30 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   outline-offset: 2px;
 }
 
-/* image grade overlay on photographic blocks with no overlaid text - minimal, just a touch of unify */
+/* no overlay on photographic blocks without overlaid text - let the image show fully */
 .grade-plum::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(38,10,36,0.04) 0%, rgba(38,10,36,0.16) 100%);
-  mix-blend-mode: multiply;
+  background: transparent;
 }
 
-/* lighter grade for blocks with headline text over the image: only as much as the text needs for legibility */
+/* blocks with headline text over the image: neutral dark scrim only where text sits (no purple cast) */
 .grade-hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(38,10,36,0.78) 0%, rgba(38,10,36,0.42) 45%, rgba(38,10,36,0.10) 100%),
-    linear-gradient(180deg, rgba(38,10,36,0.10) 0%, rgba(38,10,36,0.32) 100%);
+    linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.40) 42%, rgba(0,0,0,0.04) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.30) 100%);
 }
 .grade-cta::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(38,10,36,0.74) 0%, rgba(38,10,36,0.44) 45%, rgba(38,10,36,0.18) 100%),
-    linear-gradient(180deg, rgba(38,10,36,0.10) 0%, rgba(38,10,36,0.28) 100%);
+    linear-gradient(90deg, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.42) 42%, rgba(0,0,0,0.12) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.28) 100%);
 }
 
 .blueprint {
@@ -84,5 +83,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   gap: 0.4rem;
 }
 .legal-body li { padding-left: 0.25rem; }
-.legal-body a { color: #551852; text-decoration: underline; }
-.legal-body a:hover { color: #391037; }
+.legal-body a { color: #990099; text-decoration: underline; }
+.legal-body a:hover { color: #570057; }
