@@ -9,7 +9,7 @@ import { solutions, industries } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Solutions | Direct Staff Inc.",
   description:
-    "Direct Staff provides contract staffing and direct hire for technical and engineering roles across automotive, defense, engineering, and industrial sectors. Explore our staffing solutions.",
+    "Direct Staff provides contract staffing and permanent placement for technical and engineering roles across automotive, defense, engineering, and industrial sectors. Explore our staffing solutions.",
 };
 
 export default function SolutionsIndexPage() {
@@ -39,7 +39,7 @@ export default function SolutionsIndexPage() {
               <p>
                 We offer two core staffing models. Contract staffing gives you flexible, fully managed
                 capacity for the duration of your need, with the professional placed on-site as a Direct
-                Staff employee. Direct hire runs a full search to place a permanent employee directly into
+                Staff employee. Permanent placement runs a full search to place a permanent employee directly into
                 your organization. Many clients use both, depending on whether the need is temporary or
                 lasting. In every case you work with one team that learns your program and stays
                 accountable for the result.
@@ -132,8 +132,8 @@ export default function SolutionsIndexPage() {
       <FAQ
         eyebrow="Solutions"
         items={[
-          { q: "Which solution is right for me?", a: "If your need is temporary, tied to a program, or you want to scale capacity up and down without adding permanent headcount, contract staffing is usually the fit. If you are filling a lasting seat on your team, direct hire is the model. If you are not sure, tell us about the need and we will recommend the right approach." },
-          { q: "Can I use both contract and direct hire?", a: "Yes, and many clients do. It is common to bring on contract professionals to meet immediate demand while running a direct-hire search for permanent roles in parallel. You work with one team across both." },
+          { q: "Which solution is right for me?", a: "If your need is temporary, tied to a program, or you want to scale capacity up and down without adding permanent headcount, contract staffing is usually the fit. If you are filling a lasting seat on your team, permanent placement is the model. If you are not sure, tell us about the need and we will recommend the right approach." },
+          { q: "Can I use both contract staffing and permanent placement?", a: "Yes, and many clients do. It is common to bring on contract professionals to meet immediate demand while running a permanent placement search in parallel. You work with one team across both." },
           { q: "How fast can you deliver?", a: "For most technical roles, we return a vetted shortlist within 48 hours. The exact timeline depends on the seniority and specialization of the role, but speed is central to how we operate." },
           { q: "What does it cost to get started?", a: "Requesting talent costs nothing and carries no obligation. We scope the role with you and present candidates, and you only move forward if they are right for your program." },
         ]}

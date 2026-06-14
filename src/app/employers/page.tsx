@@ -8,7 +8,7 @@ import { solutions } from "@/lib/site";
 export const metadata: Metadata = {
   title: "For Employers | Direct Staff Inc.",
   description:
-    "Request vetted technical talent. Contract staffing, direct hire, and managed workforce solutions for automotive, defense, and industrial programs.",
+    "Request vetted technical talent. Contract staffing and permanent placement for automotive, defense, and industrial programs.",
 };
 
 export default function EmployersPage() {
@@ -100,7 +100,7 @@ export default function EmployersPage() {
         eyebrow="For employers"
         items={[
           { q: "How quickly can you deliver candidates?", a: "For most technical roles we return a vetted shortlist within 48 hours. Timelines can vary with the seniority and specialization of the role, but speed is a core part of how we operate." },
-          { q: "What is the difference between contract and direct hire?", a: "With contract staffing, the professional is a Direct Staff employee placed on-site at your facility, fully benefited, with payroll and insurance handled by us. With direct hire, we run the search and the candidate is hired directly as your employee. Many clients use both depending on the need." },
+          { q: "What is the difference between contract staffing and permanent placement?", a: "With contract staffing, the professional is a Direct Staff employee placed on-site at your facility, fully benefited, with payroll and insurance handled by us. With permanent placement, we run the search and the candidate is hired directly as your employee. Many clients use both depending on the need." },
           { q: "Which industries do you specialize in?", a: "Automotive, defense, engineering and design, and industrial and manufacturing. Our recruiters understand these disciplines, which is what allows us to screen candidates on real capability rather than keywords." },
           { q: "Do you place nationwide?", a: "Yes. While Direct Staff is based in Sterling Heights, Michigan, we place technical talent nationwide for our clients." },
           { q: "Is there any obligation to request talent?", a: "None. Requesting a shortlist costs nothing and carries no commitment. You only engage if the candidates are right for your program." },

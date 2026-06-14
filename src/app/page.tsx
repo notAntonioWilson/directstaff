@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Photo } from "@/components/Photo";
 import { Eyebrow } from "@/components/ui";
 import { DualForm } from "@/components/DualForm";
@@ -45,7 +46,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/70">
               <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 bg-gold" />Contract staffing</span>
-              <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 bg-gold" />Direct hire</span>
+              <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 bg-gold" />Permanent placement</span>
               <span className="flex items-center gap-2"><span className="h-1.5 w-1.5 bg-gold" />Nationwide placement</span>
             </div>
           </div>
@@ -63,6 +64,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* 30th anniversary seal */}
+        <Image
+          src="/ds-30-seal.png"
+          alt="Direct Staff 30th Anniversary, established 1996"
+          width={471}
+          height={411}
+          className="pointer-events-none absolute bottom-4 right-4 z-10 hidden h-20 w-auto opacity-95 drop-shadow-lg sm:block lg:h-24"
+        />
 
         {/* Stat bar */}
         <div className="relative border-t border-white/10">
@@ -237,10 +247,10 @@ export default function Home() {
       <FAQ
         eyebrow="Questions"
         items={[
-          { q: "What does Direct Staff do?", a: "Direct Staff is a technical and engineering staffing firm. For more than 30 years we have placed engineers, designers, and technical professionals into both contract and direct-hire roles across the automotive, defense, engineering, and industrial sectors." },
+          { q: "What does Direct Staff do?", a: "Direct Staff is a technical and engineering staffing firm. For more than 30 years we have placed engineers, designers, and technical professionals into both contract and permanent roles across the automotive, defense, engineering, and industrial sectors." },
           { q: "I am hiring. How do I request talent?", a: "Use the Hire Talent button or the form above. Tell us the role and skill set you need, and a recruiter follows up to scope it and return a vetted shortlist, typically within 48 hours. There is no obligation." },
           { q: "I am looking for work. How do I get started?", a: "Use the Find a Job button or switch the form above to Find Work and submit your resume. It goes straight to our recruiters, and when your background matches an open or upcoming search, we reach out directly. It is always free for candidates." },
-          { q: "What is the difference between contract and direct hire?", a: "With contract staffing, the professional is a Direct Staff employee placed on-site at the client, fully benefited. With direct hire, we run the search and the candidate is hired directly as the client's employee. Many clients use both." },
+          { q: "What is the difference between contract staffing and permanent placement?", a: "With contract staffing, the professional is a Direct Staff employee placed on-site at the client, fully benefited. With permanent placement, we run the search and the candidate is hired directly as the client's employee. Many clients use both." },
           { q: "Which industries and areas do you serve?", a: "We specialize in automotive, defense, engineering and design, and industrial and manufacturing. Based in Sterling Heights, Michigan, we place talent for clients nationwide." },
           { q: "How quickly can you deliver candidates?", a: "For most technical roles we return a vetted shortlist within 48 hours, drawn from three decades of relationships across the engineering and design community." },
         ]}
@@ -265,7 +275,7 @@ export default function Home() {
             </p>
             <ul className="mt-7 space-y-3 text-sm text-white/80">
               <li className="flex items-center gap-3"><span className="h-1.5 w-1.5 bg-gold" />Vetted shortlists, typically within 48 hours</li>
-              <li className="flex items-center gap-3"><span className="h-1.5 w-1.5 bg-gold" />Contract staffing and direct hire under one partner</li>
+              <li className="flex items-center gap-3"><span className="h-1.5 w-1.5 bg-gold" />Contract staffing and permanent placement under one partner</li>
               <li className="flex items-center gap-3"><span className="h-1.5 w-1.5 bg-gold" />No obligation, fully confidential</li>
             </ul>
             <a href={company.phoneHref} className="mt-7 inline-block font-display text-2xl font-bold text-gold-light hover:text-gold">

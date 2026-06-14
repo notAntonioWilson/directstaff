@@ -1,4 +1,5 @@
 "use client";
+// FORM DESTINATION (wire up later): submissions should be delivered to Marino@dirstaff.com
 
 import { useState } from "react";
 
@@ -115,7 +116,7 @@ function HireForm({ onPlum }: { onPlum: boolean }) {
       <select className={field} aria-label="Type of staffing" defaultValue="">
         <option value="" disabled className="text-ink">Type of staffing needed…</option>
         <option className="text-ink">Contract staffing</option>
-        <option className="text-ink">Direct hire / permanent</option>
+        <option className="text-ink">Permanent placement</option>
         <option className="text-ink">Not sure yet</option>
       </select>
       <button type="submit" className="w-full bg-gold py-4 text-sm font-bold uppercase tracking-wide text-plum-950 hover:bg-gold-light">

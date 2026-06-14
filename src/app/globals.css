@@ -41,31 +41,31 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   outline-offset: 2px;
 }
 
-/* image grade overlay used on photographic blocks (no text overlaid - lighter so image reads) */
+/* image grade overlay on photographic blocks with no overlaid text - minimal, just a touch of unify */
 .grade-plum::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(42,12,33,0.12) 0%, rgba(42,12,33,0.42) 100%);
+  background: linear-gradient(180deg, rgba(38,10,36,0.04) 0%, rgba(38,10,36,0.16) 100%);
   mix-blend-mode: multiply;
 }
 
-/* stronger grade for blocks with headline text over the image (kept dark on the left where text sits, brighter on the right) */
+/* lighter grade for blocks with headline text over the image: only as much as the text needs for legibility */
 .grade-hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(42,12,33,0.90) 0%, rgba(42,12,33,0.60) 45%, rgba(42,12,33,0.28) 100%),
-    linear-gradient(180deg, rgba(42,12,33,0.30) 0%, rgba(42,12,33,0.62) 100%);
+    linear-gradient(90deg, rgba(38,10,36,0.78) 0%, rgba(38,10,36,0.42) 45%, rgba(38,10,36,0.10) 100%),
+    linear-gradient(180deg, rgba(38,10,36,0.10) 0%, rgba(38,10,36,0.32) 100%);
 }
 .grade-cta::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(42,12,33,0.88) 0%, rgba(42,12,33,0.62) 45%, rgba(42,12,33,0.40) 100%),
-    linear-gradient(180deg, rgba(42,12,33,0.30) 0%, rgba(42,12,33,0.55) 100%);
+    linear-gradient(90deg, rgba(38,10,36,0.74) 0%, rgba(38,10,36,0.44) 45%, rgba(38,10,36,0.18) 100%),
+    linear-gradient(180deg, rgba(38,10,36,0.10) 0%, rgba(38,10,36,0.28) 100%);
 }
 
 .blueprint {
@@ -84,5 +84,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   gap: 0.4rem;
 }
 .legal-body li { padding-left: 0.25rem; }
-.legal-body a { color: #5C1A4B; text-decoration: underline; }
-.legal-body a:hover { color: #3D1230; }
+.legal-body a { color: #551852; text-decoration: underline; }
+.legal-body a:hover { color: #391037; }

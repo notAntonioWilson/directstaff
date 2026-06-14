@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Direct Staff Inc. | Executive & Technical Search",
   description:
-    "For over 30 years, Direct Staff has placed the engineers, designers, and technical experts that move the automotive, defense, and industrial sectors forward. Contract staffing and direct hire, nationwide.",
+    "For over 30 years, Direct Staff has placed the engineers, designers, and technical experts that move the automotive, defense, and industrial sectors forward. Contract staffing and permanent placement, nationwide.",
   metadataBase: new URL("https://www.dirstaff.com"),
   icons: {
     icon: [

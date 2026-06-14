@@ -3,7 +3,7 @@
 const CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_38rSmNL40WXgdieukkqKbzzBpaF";
 
 export const img = {
-  hero: `${CDN}/hf_20260612_121549_de16659b-68dc-4f5b-9978-45a2db2fa7a6.png`,
+  hero: `${CDN}/hf_20260614_155707_f347a191-a45e-4d96-80fb-a5e4b66afaac.png`,
   cta: `${CDN}/hf_20260612_121554_705c3242-9feb-4117-bf8d-ab23673616ae.jpeg`,
   about: `${CDN}/hf_20260612_121626_19c2f788-1d4a-46d1-98e4-49ceb12d1052.png`,
   contract: `${CDN}/hf_20260612_121632_2866e177-df17-424c-be93-5cd079396d48.png`,
@@ -53,13 +53,13 @@ export const solutions = [
     cta: "Request contract talent",
   },
   {
-    slug: "direct-hire",
-    title: "Direct Hire",
+    slug: "permanent-placement",
+    title: "Permanent Placement",
     short: "Permanent placement: we run the search, you hire the candidate directly.",
     image: img.direct,
     intro:
-      "Direct Staff works to find the right candidates to fill direct opportunities within our customer companies. We facilitate the search for the perfect fit, taking the legwork and searching off our customers' plate and providing them with the right candidates.",
-    body: "Selected candidates work directly for the customer, as their employee. Our direct placement customers include automotive OEMs, Tier suppliers, and major manufacturing corporations. We run sourcing and technical screening, then present a vetted shortlist, so your team hires with confidence.",
+      "Direct Staff works to find the right candidates to fill permanent opportunities within our customer companies. We facilitate the search for the perfect fit, taking the legwork and searching off our customers' plate and providing them with the right candidates.",
+    body: "Selected candidates work directly for the customer, as their employee. Our permanent placement customers include automotive OEMs, Tier suppliers, and major manufacturing corporations. We run sourcing and technical screening, then present a vetted shortlist, so your team hires with confidence.",
     points: [
       "Full-cycle search for permanent technical and professional roles",
       "Candidate is hired directly as the customer's employee",
@@ -74,7 +74,7 @@ export const solutions = [
       "Purchasing / Marketing",
       "Technical",
     ],
-    cta: "Start a direct search",
+    cta: "Start a permanent search",
   },
 ];
 
