@@ -76,7 +76,7 @@ export default function AboutPage() {
               <p className="mt-3 text-sm leading-relaxed text-steel">
                 Direct Staff was established to serve the engineering and design community at the heart of
                 North American manufacturing. From the start, the focus was technical talent for technical
-                industries, not general staffing.
+                industries.
               </p>
             </div>
             <div className="border-t-2 border-gold pt-6">
