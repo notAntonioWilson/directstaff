@@ -77,10 +77,15 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="wrap py-5">
           <p className="text-xs leading-relaxed text-white/55">
-            Direct Staff, Inc. is proud to be an equal opportunity employer. We promote and afford equal
-            treatment and service to all employees and applicants for employment. All employees and
-            applicants are given an equal employment opportunity without regard to race, religion, color,
-            national origin, age, gender, marital status, or disability.
+            Direct Staff is an equal opportunity employer. We recruit, hire, train, assign, promote,
+            compensate, and make all other employment decisions on the basis of ability, qualifications,
+            and business needs, not on the basis of any characteristic protected by law. The Company
+            prohibits discrimination and harassment against any applicant or employee on the basis of race,
+            color, religion, national origin, sex (including pregnancy, childbirth, and related medical
+            conditions), sexual orientation, gender identity or expression, age, height, weight, familial
+            status, marital status, disability, genetic information, military or veteran status, or any
+            other status protected under federal law, the Michigan Elliott-Larsen Civil Rights Act, the
+            Persons with Disabilities Civil Rights Act, or other applicable state or local law.
           </p>
         </div>
       </div>
