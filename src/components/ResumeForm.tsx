@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { submitToWebhook } from "@/lib/submitForm";
+import { submitToWebhook, fileToBase64 } from "@/lib/submitForm";
 
 export function ResumeForm() {
   const [sent, setSent] = useState(false);
@@ -15,7 +15,9 @@ export function ResumeForm() {
     const data = new FormData(e.currentTarget);
     if (data.get("company_website")) return; // honeypot
     const resume = data.get("resume");
-    const resumeName = resume instanceof File && resume.name ? resume.name : "";
+    const resumeFile = resume instanceof File && resume.name ? resume : null;
+    const resumeName = resumeFile ? resumeFile.name : "";
+    const resumeBase64 = resumeFile ? await fileToBase64(resumeFile) : "";
     setSubmitting(true);
     await submitToWebhook({
       tag: "get_hired",
@@ -25,6 +27,7 @@ export function ResumeForm() {
       phone: data.get("phone"),
       discipline: data.get("discipline"),
       resume_filename: resumeName,
+      resume_base64: resumeBase64,
       source_page: typeof window !== "undefined" ? window.location.pathname : "",
     });
     setSubmitting(false);

@@ -1,11 +1,25 @@
 // Posts form submissions to the Make.com webhook.
 // The `tag` field ("hiring" or "get_hired") drives the Make router that fans out
 // to the notification emails (Antonio + owner) and the applicant/client email.
-// Resume handling is Option A: filename only, the file itself is not transmitted.
+// Resume: sends filename + base64 of the file so Make can decode and attach it.
 
 const WEBHOOK_URL = "https://hook.us2.make.com/cj2wp0d3ljnnal6tkkgd9torym4kgh5l";
 
 export type SubmitResult = "ok" | "error";
+
+// Reads a File into a base64 string (no data: prefix), for sending through the webhook.
+export function fileToBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = String(reader.result || "");
+      const comma = result.indexOf(",");
+      resolve(comma >= 0 ? result.slice(comma + 1) : result);
+    };
+    reader.onerror = () => reject(new Error("file read failed"));
+    reader.readAsDataURL(file);
+  });
+}
 
 export async function submitToWebhook(
   payload: Record<string, unknown>
