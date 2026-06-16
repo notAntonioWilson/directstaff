@@ -11,17 +11,21 @@ export async function submitToWebhook(
   payload: Record<string, unknown>
 ): Promise<SubmitResult> {
   try {
-    const body = JSON.stringify({
+    const params = new URLSearchParams();
+    Object.entries({
       ...payload,
       submitted_at: new Date().toISOString(),
+    }).forEach(([key, value]) => {
+      params.append(key, value == null ? "" : String(value));
     });
 
-    // Sent as text/plain to avoid a CORS preflight that some webhook
-    // endpoints reject. Make parses the JSON body regardless of content-type.
+    // Sent form-encoded so Make parses each field into its own mappable item
+    // (no JSON-blob dissecting needed). This is a CORS "simple request",
+    // so it avoids a preflight that some webhook endpoints reject.
     const res = await fetch(WEBHOOK_URL, {
       method: "POST",
-      headers: { "Content-Type": "text/plain;charset=UTF-8" },
-      body,
+      headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+      body: params.toString(),
     });
 
     return res.ok ? "ok" : "error";
