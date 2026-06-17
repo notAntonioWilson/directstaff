@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ["", "/about", "/employers", "/job-seekers", "/contact", "/solutions", "/industries"];
   const solutionRoutes = solutions.map((s) => `/solutions/${s.slug}`);
   const industryRoutes = industries.map((i) => `/industries/${i.slug}`);
-  const legalRoutes = ["/privacy-policy", "/terms-of-service", "/disclaimer"];
+  const legalRoutes = ["/privacy-policy", "/terms-of-service", "/disclaimer", "/eeoc"];
   return [...routes, ...solutionRoutes, ...industryRoutes, ...legalRoutes].map((r) => ({
     url: `${base}${r}`,
     lastModified: new Date(),

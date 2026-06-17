@@ -75,27 +75,13 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="wrap py-5">
-          <p className="text-xs leading-relaxed text-white/55">
-            Direct Staff is proud to be an equal opportunity employer and encourages all individuals to
-            join our team. Direct Staff provides equal employment opportunities to all employees and
-            applicants without regard to race, color, religion, national origin, sex (including pregnancy,
-            childbirth, and related medical conditions), sexual orientation, gender identity or expression,
-            age, height, weight, familial status, marital status, disability, genetic information, military
-            or veteran status, or any other status protected by applicable law. Our equal opportunity
-            commitment applies to all aspects of employment including recruiting, hiring, training,
-            promotion and compensation.
-          </p>
-        </div>
-      </div>
-
-      <div className="border-t border-white/10">
         <div className="wrap flex flex-col items-center justify-between gap-3 py-5 text-xs text-white/50 md:flex-row">
           <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
           <nav className="flex flex-wrap items-center gap-x-5 gap-y-2" aria-label="Legal">
             <Link href="/privacy-policy" className="hover:text-gold-light">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-gold-light">Terms of Service</Link>
             <Link href="/disclaimer" className="hover:text-gold-light">Disclaimer</Link>
+            <Link href="/eeoc" className="hover:text-gold-light">EEOC</Link>
           </nav>
         </div>
       </div>
