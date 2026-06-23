@@ -25,7 +25,6 @@ export const company = {
   serves: "Nationwide",
   yearsLabel: "30+ years",
   linkedin: "https://www.linkedin.com/company/direct-staff/",
-  facebook: "https://www.facebook.com/share/1F6JREU3mE/?mibextid=wwXIfr",
 };
 
 export const nav = [
